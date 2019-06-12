@@ -1,9 +1,9 @@
 ifeq ($(CONFIG_MACH_XIAOMI_SM8150),y)
 ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
 dtbo-$(CONFIG_ARCH_SM8150) += \
-		cepheus-sm8150-overlay.dtbo
+		raphael-sm8150-overlay.dtbo
 
-cepheus-sm8150-overlay.dtbo-base := sm8150.dtb sm8150-v2.dtb sm8150p.dtb sm8150p-v2.dtb
+raphael-sm8150-overlay.dtbo-base := sm8150.dtb sm8150-v2.dtb sm8150p.dtb sm8150p-v2.dtb
 endif
 else
 # SPDX-License-Identifier: GPL-2.0
@@ -330,6 +330,7 @@ dtb-$(CONFIG_ARCH_SDXPRAIRIE) += sdxprairie-rumi.dtb \
 	sa515m-ccard-usb-ep.dtb
 endif
 
+endif
 ifeq ($(CONFIG_ARM64),y)
 always		:= $(dtb-y)
 subdir-y	:= $(dts-dirs)
